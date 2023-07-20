@@ -1,0 +1,455 @@
+:root {
+  --primary: hsla(0deg, 0%, 0%, 0.65);
+  --secondary: hsla(65deg, 0%, 0%, 0.73);
+  --font-family: 'Roboto', sans-serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-shadow: #fff;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll; overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)),
+              url(Greens.avif) no-repeat center center fixed;
+              background-size: cover;
+              height: 100%;
+              font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;*/
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/*----NAVBAR----*/
+
+nav {
+  position: sticky;
+  max-height: 7rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 3.5rem;
+  background: linear-gradient(180deg, hsla(0deg, 0%, 0%, 1), hsla(0deg, 0%, 100%, 0));
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0%);
+  align-items: center;
+  flex-direction: row;
+}
+
+nav h1 {
+  color: #fff;
+}
+
+nav a {
+  color: #fff
+  transition: var(--transition);
+  font-size: 2rem;
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid #fff;
+}
+
+nav ul {
+  color: #fff;
+  display: flex;
+  gap: 1.9rem;
+  align-items: flex-start;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+ nav ul {
+    position: fixed;
+    background: linear-gradient(0deg, hsla(0deg, 0%, 0%, 1), hsla(0deg, 0%, 100%, 0));
+    flex-direction: column;
+    max-width: 10rem;
+    top: 4rem;
+    width: 80%;
+    text-align: center;
+    transform: translatey(-120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+/*----SOCIAL----*/
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 35px;
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  color: #f1f1f1;
+}
+
+.bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 100%; 
+  height: 100%;
+}
+
+.bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+} 
+
+/*----HERO----*/
+
+.hero {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  max-width: 68.75rem;
+  margin: auto;
+  margin-top: 20rem;
+  padding-left: 1rem;
+  padding-right: 5rem;
+
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+h2.bio-title {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 25px;
+  font-size: 4rem;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.25;
+  letter-spacing: .05em;
+}
+
+h2 {
+  margin: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p.bio-text {
+    display: flex;
+    line-height: var(--line-height);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 25px;
+    font-weight: bold;
+    letter-spacing: .05em;
+}
+
+/*-----MORE ABOUT----*/
+
+.more-about {
+  background: linear-gradient(180deg, hsla(0deg, 0%, 0%, 0.50), hsla(0deg, 0%, 100%, 0));
+  margin-top: 20rem;
+}
+
+.more-about h2 {
+  color: #fff;
+  font-size: 40px;
+  margin: 25px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline;
+}
+
+.more-about p {
+  color: #fff;
+  line-height: 1.25;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto;
+  letter-spacing: .05em;
+  width: 30em;
+}
+
+.Rs-btn {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 50px;
+}
+
+button.Resume-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  border: 3px solid black;
+  border-radius: 12px;
+}
+
+button.Resume-btn:hover {
+  box-shadow: 0 15px 15px 0 rgba(255,255,255,1), 0 20px 50px 0 rgba(255,255,255,1);
+}
+
+a.resume.link {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/*----PROJECTS----*/
+
+.projects {
+  background: linear-gradient(180deg, hsla(0deg, 0%, 0%, 0.50), hsla(0deg, 0%, 100%, 0));
+  display: flex;
+  flex-direction: column;
+}
+
+.project-pic {
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.projects-title {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.project-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+button.project-btn {
+  height: 2.5rem;
+  width: 25rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button.project-btn:hover {
+  box-shadow: 0 15px 15px 0 rgba(255,255,255,1), 0 20px 50px 0 rgba(255,255,255,1);
+}
+
+a.project-link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.project-card {
+/*  background-color: #fff;*/ 
+  background: linear-gradient(180deg, hsla(0deg, 0%, 0%, 0.65), hsla(0deg, 0%, 100%, 0.65));
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----CONTACT----*/
+
+.contact {
+  margin-top: 15rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.input-field::placeholder {
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/*-----FOOTER-----*/
+
+footer {
+  background: linear-gradient(0deg, hsla(0deg, 0%, 0%, 0.65), hsla(0deg, 0%, 100%, 0));
+  color: #fff;
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
